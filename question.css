@@ -1,0 +1,567 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #102b22;
+}
+
+
+/* ================================
+   MAIN PAGE
+================================ */
+
+.question-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(7, 31, 24, 0.30),
+            rgba(7, 31, 24, 0.45)
+        ),
+        url("assets/images/poolnight.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HOME BUTTON
+   ========================================= */
+
+.home-button {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 250, 234, 0.95);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 20;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.08);
+
+    background: #fffdf5;
+}
+
+.home-button svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+
+    stroke: #183d2c;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.question-header {
+    position: relative;
+
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    z-index: 10;
+}
+
+.question-header h1 {
+    color: #f8f1df;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+
+    font-size: clamp(38px, 5vw, 68px);
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.little-line {
+    color: #f8f1df;
+
+    font-size: 55px;
+    line-height: 1;
+
+    transform: translateY(-5px);
+}
+
+
+/* ================================
+   QUESTION CARD
+================================ */
+
+.question-card {
+    position: relative;
+
+    width: min(720px, 75vw);
+    min-height: 450px;
+
+    margin-top: 55px;
+
+    padding: 100px 70px 65px;
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 230, 0.96),
+            rgba(244, 237, 210, 0.96)
+        );
+
+    border: 3px solid #173c2d;
+
+    border-radius: 10px;
+
+    box-shadow:
+        12px 14px 0 rgba(11, 44, 33, 0.75),
+        0 15px 35px rgba(0, 0, 0, 0.30);
+
+    transform: rotate(-1deg);
+
+    z-index: 10;
+}
+
+
+/* ================================
+   TAPE
+================================ */
+
+.tape {
+    position: absolute;
+
+    width: 145px;
+    height: 42px;
+
+    top: -18px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(1deg);
+
+    background: rgba(164, 184, 164, 0.70);
+
+    border-left: 2px solid rgba(255,255,255,0.25);
+    border-right: 2px solid rgba(255,255,255,0.25);
+
+    opacity: 0.85;
+}
+
+
+/* ================================
+   CARD DECORATIONS
+================================ */
+
+.card-decoration {
+    position: absolute;
+
+    color: #173c2d;
+
+    font-family: cursive;
+}
+
+.star {
+    top: 30px;
+    left: 35px;
+
+    font-size: 35px;
+
+    transform: rotate(-15deg);
+}
+
+.heart {
+    top: 25px;
+    right: 35px;
+
+    font-size: 45px;
+
+    transform: rotate(10deg);
+}
+
+
+/* ================================
+   QUESTION TEXT
+================================ */
+
+.question-text {
+    position: relative;
+
+    color: #173c2d;
+
+    text-align: center;
+
+    font-family:
+        "Comic Sans MS",
+        "Trebuchet MS",
+        cursive;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.35;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.question-text span {
+    position: relative;
+
+    color: #b84d42;
+}
+
+
+/* little underline underneath boyfriend */
+
+.question-text span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -3px;
+
+    height: 3px;
+
+    background: #b84d42;
+
+    border-radius: 50%;
+
+    transform: rotate(-2deg);
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.choice-buttons {
+    margin-top: 65px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 70px;
+}
+
+.choice-btn {
+    position: relative;
+
+    min-width: 180px;
+    height: 70px;
+
+    padding: 10px 35px;
+
+    border: 3px solid #173c2d;
+    border-radius: 45px;
+
+    background: #173c2d;
+
+    color: #f8f1df;
+
+    font-family:
+        "Comic Sans MS",
+        "Trebuchet MS",
+        cursive;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        4px 5px 0 rgba(9, 34, 25, 0.55);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.choice-btn:hover {
+    transform: translateY(-5px) rotate(-1deg);
+
+    box-shadow:
+        5px 8px 0 rgba(9, 34, 25, 0.55);
+
+    background: #245340;
+}
+
+.choice-btn:active {
+    transform: translateY(2px);
+
+    box-shadow:
+        2px 3px 0 rgba(9, 34, 25, 0.55);
+}
+
+
+/* ================================
+   BILLIARD BALLS
+================================ */
+
+.ball {
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    object-fit: contain;
+
+    z-index: 3;
+
+    filter:
+        drop-shadow(8px 10px 5px rgba(0,0,0,0.35));
+
+    animation: floatBall 4s ease-in-out infinite;
+}
+
+.ball-9 {
+    left: 7%;
+    top: 24%;
+
+    transform: rotate(-12deg);
+}
+
+.ball-8 {
+    left: -2%;
+    bottom: 14%;
+
+    transform: rotate(8deg);
+
+    animation-delay: 1s;
+}
+
+.ball-11 {
+    right: 7%;
+    bottom: 9%;
+
+    transform: rotate(13deg);
+
+    animation-delay: 2s;
+}
+
+@keyframes floatBall {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -8px;
+    }
+}
+
+
+/* ================================
+   CUE
+================================ */
+
+.cue {
+    position: absolute;
+
+    width: 10px;
+    height: 500px;
+
+    right: 7%;
+    top: 18%;
+
+    background:
+        linear-gradient(
+            to right,
+            #6e452b,
+            #c9945b,
+            #71452b
+        );
+
+    border-radius: 8px;
+
+    transform: rotate(20deg);
+
+    box-shadow:
+        5px 8px 10px rgba(0,0,0,0.35);
+
+    z-index: 2;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .question-header {
+        margin-top: 65px;
+    }
+
+    .question-card {
+        width: 82vw;
+
+        min-height: 410px;
+
+        padding:
+            85px
+            35px
+            55px;
+    }
+
+    .question-header h1 {
+        font-size: 42px;
+    }
+
+    .question-text {
+        font-size: 32px;
+    }
+
+    .choice-buttons {
+        gap: 25px;
+    }
+
+    .choice-btn {
+        min-width: 140px;
+        height: 60px;
+
+        font-size: 25px;
+    }
+
+    .ball {
+        width: 75px;
+        height: 75px;
+    }
+
+    .cue {
+        right: 2%;
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .home-button {
+        top: 18px;
+        left: 18px;
+    }
+
+    .question-header {
+        margin-top: 70px;
+
+        gap: 8px;
+    }
+
+    .question-header h1 {
+        font-size: 31px;
+    }
+
+    .little-line {
+        font-size: 35px;
+    }
+
+    .question-card {
+        width: 88vw;
+
+        margin-top: 35px;
+
+        min-height: 390px;
+
+        padding:
+            80px
+            20px
+            45px;
+    }
+
+    .question-text {
+        font-size: 26px;
+    }
+
+    .choice-buttons {
+        gap: 15px;
+        margin-top: 50px;
+    }
+
+    .choice-btn {
+        min-width: 120px;
+        height: 55px;
+
+        padding: 5px 20px;
+
+        font-size: 22px;
+    }
+
+    .ball {
+        width: 55px;
+        height: 55px;
+    }
+
+    .ball-9 {
+        left: 2%;
+        top: 25%;
+    }
+
+    .ball-8 {
+        left: 0;
+        bottom: 8%;
+    }
+
+    .ball-11 {
+        right: 2%;
+        bottom: 7%;
+    }
+
+    .cue {
+        display: none;
+    }
+}

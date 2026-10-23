@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope</title>
+    <link rel="stylesheet" href="envelope.css">
+</head>
+
+<body>
+
+    <div class="envelope-page">
+
+        <!-- Decorative billiard balls -->
+        <img src="assets/images/8.png" class="decor-ball ball-8" alt="">
+        <img src="assets/images/3.png" class="decor-ball ball-3" alt="">
+        <img src="assets/images/5.png" class="decor-ball ball-5" alt="">
+        <img src="assets/images/2.png" class="decor-ball ball-2" alt="">
+
+        <!-- Pool cue -->
+        <img
+            src="assets/images/poolcue.png"
+            class="pool-cue"
+            alt=""
+        >
+
+        <!-- HOME BUTTON -->
+        <a href="index.html" class="home-button" aria-label="Home">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 10.5L12 3l9 7.5"></path>
+                <path d="M5.5 9.5V21h13V9.5"></path>
+                <path d="M9.5 21v-7h5v7"></path>
+            </svg>
+
+        </a>
+
+
+        <!-- Main content -->
+        <div class="content">
+
+            <div class="instruction">
+
+                <span class="instruction-line"></span>
+
+                <h1>Tap the ball to open</h1>
+
+                <span class="instruction-line"></span>
+
+            </div>
+
+
+            <!-- Envelope -->
+            <div class="envelope-container">
+
+                <!-- Soft shadow behind envelope -->
+                <div class="envelope-shadow"></div>
+
+                <img
+                    src="assets/images/envelope.png"
+                    alt="Envelope"
+                    class="envelope"
+                >
+
+
+                <!-- Billiard ball seal -->
+                <button
+                    class="seal-btn"
+                    onclick="openLetter()"
+                    aria-label="Open envelope"
+                >
+
+                    <img
+                        src="assets/images/11.png"
+                        alt="11 billiard ball"
+                        class="seal"
+                    >
+
+                </button>
+
+            </div>
+
+
+            <p class="bottom-text">
+             ♡
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="envelope.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Question</title>
+
+    <link rel="stylesheet" href="question.css">
+</head>
+
+<body>
+
+    <!-- HOME BUTTON -->
+    <a href="index.html" class="home-button" aria-label="Home">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 10.5L12 3l9 7.5"></path>
+                <path d="M5.5 9.5V21h13V9.5"></path>
+                <path d="M9.5 21v-7h5v7"></path>
+            </svg>
+
+        </a>
+
+    <!-- MAIN PAGE -->
+    <main class="question-page">
+
+        <!-- HEADER -->
+        <div class="question-header">
+            <span class="little-line">~</span>
+            <h1>The question is</h1>
+            <span class="little-line">~</span>
+        </div>
+
+        <!-- QUESTION CARD -->
+        <section class="question-card">
+
+            <div class="tape"></div>
+
+            <div class="card-decoration star">✦</div>
+            <div class="card-decoration heart">♡</div>
+
+            <div class="question-text">
+                Are you sure you want<br>
+                to be my <span>boyfriend?</span>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="choice-buttons">
+
+                <button
+                    id="yes-button"
+                    class="choice-btn"
+                    onclick="answerYes()">
+                    yes
+                </button>
+
+                <button
+                    id="ofc-button"
+                    class="choice-btn"
+                    onclick="answerOfc()">
+                    ofc
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- DECORATIVE BILLIARD BALLS -->
+        <img
+            src="assets/images/9.png"
+            class="ball ball-9"
+            alt="">
+
+        <img
+            src="assets/images/8.png"
+            class="ball ball-8"
+            alt="">
+
+        <img
+            src="assets/images/11.png"
+            class="ball ball-11"
+            alt="">
+
+        <!-- CUE -->
+        <div class="cue"></div>
+
+    </main>
+
+    <script src="question.js"></script>
+
+</body>
+</html>

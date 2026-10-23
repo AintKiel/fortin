@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Tin ♡</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <!-- =========================
+             SLIDE 1 — GREETING
+        ========================== -->
+
+        <section
+            class="slide active"
+            id="slide-1"
+            style="background-image: url('assets/images/billiard.jpg');"
+        >
+
+            <img
+                src="assets/images/me_cute.png"
+                alt="Cute picture of me"
+                class="my-picture"
+            >
+
+            <div class="greeting-card">
+
+                <!-- Cute cat GIF -->
+                <img
+                    src="assets/images/cat.png"
+                    alt="Cute cat"
+                    class="cat-gif"
+                >
+
+                <!-- Greeting -->
+                <h1>Hi, Tin!</h1>
+
+                <!-- Heart -->
+                <div class="heart-divider">♡</div>
+
+                <!-- Question -->
+                <p>Do you want to know what's inside?</p>
+
+                <!-- Buttons -->
+                <div class="button-group">
+
+                    <a
+                        href="passcode.html"
+                        id="yes-button"
+                        class="choice-btn yes-btn"
+                    >
+                        YES PLEASE
+                    </a>
+
+                    <button
+                        id="no-button"
+                        class="choice-btn no-btn"
+                        onclick="makeYesBigger()"
+                    >
+                        NO THANKS
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

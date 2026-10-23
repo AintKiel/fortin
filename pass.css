@@ -1,0 +1,534 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #123d2b;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.passcode-page {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+
+    background: #123d2b;
+}
+
+
+/* =========================
+   LEFT IMAGE
+========================= */
+
+.passcode-image {
+    width: 50%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+.passcode-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.passcode-panel {
+    width: 50%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 50px;
+
+    background: #123d2b;
+
+    color: #000;
+
+    overflow: hidden;
+}
+
+
+.passcode-content {
+    width: min(500px, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================
+   HOME BUTTON
+========================= */
+
+.home-button {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    z-index: 20;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.home-button svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+
+    stroke: #000;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.home-button:hover {
+    transform: scale(1.08);
+
+    background: #fff;
+}
+
+
+.home-button:active {
+    transform: scale(0.92);
+}
+
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+.small-text {
+    font-size: 0.72rem;
+
+    letter-spacing: 0.22em;
+
+    color: #000;
+
+    margin-bottom: 14px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.passcode-content h1 {
+    font-family: cursive;
+
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    color: #000;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart-divider {
+    margin: 5px 0 15px;
+
+    font-size: 25px;
+
+    color: #000;
+}
+
+
+/* =========================
+   PASSCODE DISPLAY
+========================= */
+
+.passcode-display {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.passcode-display span {
+    width: 45px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 2px solid #000;
+
+    color: #000;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   HINT
+========================= */
+
+.hint {
+    margin-bottom: 20px;
+
+    font-size: 0.90rem;
+
+    color: #000;
+
+    opacity: 0.8;
+
+    letter-spacing: 0.22em;
+
+    color: #000;
+
+    opacity: 0.75;
+}
+
+
+/* =========================
+   NUMBER PAD
+========================= */
+
+.number-pad {
+    width: 270px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 70px);
+
+    grid-template-rows: repeat(4, 70px);
+
+    column-gap: 30px;
+    row-gap: 13px;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================
+   BALL BUTTON
+========================= */
+
+.ball-button {
+    width: 70px;
+    height: 70px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.ball-button img {
+    width: 66px;
+    height: 66px;
+
+    object-fit: contain;
+
+    display: block;
+
+    pointer-events: none;
+}
+
+
+.ball-button:hover {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(0, 0, 0, 0.35)
+        );
+}
+
+
+.ball-button:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================
+   ZERO
+========================= */
+
+.zero-button {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+
+/* =========================
+   CLEAR ICON
+========================= */
+
+.clear-button {
+    grid-column: 3;
+    grid-row: 4;
+
+    justify-self: center;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: 1.5px solid #000;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #000;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.clear-button svg {
+    width: 27px;
+    height: 27px;
+
+    fill: none;
+
+    stroke: #000;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.clear-button:hover {
+    transform: scale(1.1);
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+.clear-button:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================
+   SMALL SCREENS
+========================= */
+
+@media (max-width: 800px) {
+
+    .passcode-image {
+        width: 45%;
+    }
+
+    .passcode-panel {
+        width: 55%;
+
+        padding: 25px;
+    }
+
+    .passcode-content h1 {
+        font-size: 3rem;
+    }
+
+    .number-pad {
+        grid-template-columns: repeat(3, 60px);
+
+        grid-template-rows: repeat(4, 60px);
+
+        column-gap: 18px;
+        row-gap: 8px;
+
+        width: 216px;
+    }
+
+    .ball-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ball-button img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .home-button {
+        top: 18px;
+        left: 18px;
+
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+
+@media (max-width: 550px) {
+
+    .passcode-page {
+        flex-direction: column;
+    }
+
+    .passcode-image {
+        width: 100%;
+        height: 32vh;
+    }
+
+    .passcode-panel {
+        width: 100%;
+        height: 68vh;
+
+        padding: 15px;
+    }
+
+    .passcode-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .small-text {
+        margin-bottom: 8px;
+    }
+
+    .heart-divider {
+        margin: 3px 0 8px;
+    }
+
+    .hint {
+        margin-bottom: 10px;
+    }
+
+    .number-pad {
+        grid-template-columns: repeat(3, 55px);
+
+        grid-template-rows: repeat(4, 55px);
+
+        column-gap: 15px;
+        row-gap: 5px;
+
+        width: 195px;
+    }
+
+    .ball-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .ball-button img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .clear-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .clear-button svg {
+        width: 23px;
+        height: 23px;
+    }
+}
